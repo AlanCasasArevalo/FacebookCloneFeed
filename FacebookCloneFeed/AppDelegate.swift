@@ -22,9 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         application.statusBarStyle = .lightContent
 
-        let feedController = FeedViewController(collectionViewLayout: UICollectionViewLayout())
+        let feedController = FeedCollectionViewController()
         let navigationVC = UINavigationController(rootViewController: feedController)
         window?.rootViewController = navigationVC
+        
         return true
     }
 

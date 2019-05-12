@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51B315D3228868BC000116E6 /* FeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B315D1228868BC000116E6 /* FeedCollectionViewController.swift */; };
+		51B315D4228868BC000116E6 /* FeedCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */; };
 		CD7F70464338E28E3CA86DA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7F7BC9C7D3471D55DE73B5 /* LaunchScreen.storyboard */; };
 		CD7F73538C7BD818EB32DA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7F7213119A5888165D27B1 /* Assets.xcassets */; };
-		CD7F777D8DB5102A342F06DD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7783CA111456EC81F20B /* FeedViewController.swift */; };
+		CD7F77F840A108F408A1FD39 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7FD8BABBF5344CD8D996 /* FeedCell.swift */; };
 		CD7F799F0681964D154C011B /* FacebookCloneFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7F3F8BDF7B3246878903 /* FacebookCloneFeedTests.swift */; };
 		CD7F7FC599AD17E034570F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7DA5F73F7BD0B57B83E9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -25,15 +27,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51B315D1228868BC000116E6 /* FeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewController.swift; sourceTree = "<group>"; };
+		51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCollectionViewController.xib; sourceTree = "<group>"; };
 		CD7F7213119A5888165D27B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD7F7495B80059F5110000DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CD7F74B4C1F38DB09354E8E9 /* FacebookCloneFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookCloneFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7F74C5798341EFE189E45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CD7F762E2F9B1F505E5753B6 /* FacebookCloneFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookCloneFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD7F7783CA111456EC81F20B /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		CD7F7AB9381E4C08A197C39C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7F7DA5F73F7BD0B57B83E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7F7F3F8BDF7B3246878903 /* FacebookCloneFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCloneFeedTests.swift; sourceTree = "<group>"; };
+		CD7F7FD8BABBF5344CD8D996 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				CD7F7213119A5888165D27B1 /* Assets.xcassets */,
 				CD7F7BC9C7D3471D55DE73B5 /* LaunchScreen.storyboard */,
 				CD7F7DA5F73F7BD0B57B83E9 /* AppDelegate.swift */,
-				CD7F7783CA111456EC81F20B /* FeedViewController.swift */,
+				51B315D1228868BC000116E6 /* FeedCollectionViewController.swift */,
+				51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */,
+				CD7F7FD8BABBF5344CD8D996 /* FeedCell.swift */,
 			);
 			path = FacebookCloneFeed;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD7F73538C7BD818EB32DA89 /* Assets.xcassets in Resources */,
+				51B315D4228868BC000116E6 /* FeedCollectionViewController.xib in Resources */,
 				CD7F70464338E28E3CA86DA1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,8 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B315D3228868BC000116E6 /* FeedCollectionViewController.swift in Sources */,
 				CD7F7FC599AD17E034570F11 /* AppDelegate.swift in Sources */,
-				CD7F777D8DB5102A342F06DD /* FeedViewController.swift in Sources */,
+				CD7F77F840A108F408A1FD39 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
