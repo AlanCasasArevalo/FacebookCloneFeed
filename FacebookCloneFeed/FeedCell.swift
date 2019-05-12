@@ -39,7 +39,6 @@ class FeedCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(named: "Beth")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
 
@@ -50,17 +49,27 @@ class FeedCell: UICollectionViewCell {
         return textView
     }()
 
+    let statusImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
+        imageView.image = UIImage(named: "Lang")
+        return imageView
+    }()
+
     private func setupViews() {
         backgroundColor = UIColor.white
 
         addSubview(nameLabel)
         addSubview(profileImageView)
         addSubview(statusTextView)
+        addSubview(statusImageView)
 
         addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView,  nameLabel)
         addConstraintsWithFormat(format: "H:|-4-[v0]-4-|", views: statusTextView)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: statusImageView)
         addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
-        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]", views: profileImageView, statusTextView)
+        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]|", views: profileImageView, statusTextView, statusImageView)
     }
 }
 
