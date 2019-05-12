@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c4e3e417-dcba-4e09-944d-d49c7180c192" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/FacebookCloneFeed-fmkrovbgmcvoficgkorottentkck/Build/Intermediates.noindex/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,17 +14,34 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_BC1776D5-01F9-48C9-AA42-4742F5EF2548" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="21" column="63" lean-forward="true" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.64458805">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-49">
+                  <caret line="38" selection-start-line="38" selection-end-line="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="296">
+                  <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,6 +52,7 @@
         <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedController.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/AppDelegate.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedViewController.swift" />
+        <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" />
       </list>
     </option>
@@ -50,7 +69,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -93,6 +111,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,18 +156,18 @@
       <option name="presentableId" value="Default" />
       <updated>1557643915867</updated>
       <workItem from="1557643920832" duration="514000" />
-      <workItem from="1557674226443" duration="1628000" />
+      <workItem from="1557674226443" duration="3397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5909000" />
+    <option name="totallyTimeSpent" value="7678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16453674" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16397415" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -202,10 +221,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="21" column="63" lean-forward="true" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+        <state relative-caret-position="-49">
+          <caret line="38" selection-start-line="38" selection-end-line="43" />
         </state>
       </provider>
     </entry>
