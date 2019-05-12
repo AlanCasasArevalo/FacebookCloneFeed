@@ -38,20 +38,29 @@ class FeedCell: UICollectionViewCell {
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .cyan
         imageView.image = UIImage(named: "Beth")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
 
+    let statusTextView: UITextView = {
+        let textView = UITextView()
+        textView.text = "MeanWhile, beast turened to the dark side."
+        textView.font = UIFont.systemFont(ofSize: 14)
+        return textView
+    }()
+
     private func setupViews() {
         backgroundColor = UIColor.white
+
         addSubview(nameLabel)
         addSubview(profileImageView)
+        addSubview(statusTextView)
 
         addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView,  nameLabel)
-        addConstraintsWithFormat(format:  "V:|[v0]|", views: nameLabel)
-        addConstraintsWithFormat(format:  "V:|-8-[v0(44)]|", views: profileImageView)
+        addConstraintsWithFormat(format: "H:|-4-[v0]-4-|", views: statusTextView)
+        addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]", views: profileImageView, statusTextView)
     }
 }
 
