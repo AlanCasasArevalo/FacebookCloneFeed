@@ -17,9 +17,8 @@ class FeedCell: UICollectionViewCell {
 
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "_DummyText"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
+        let attributedText = NSMutableAttributedString(string: "_Beth", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
+        label.attributedText = attributedText
         return label
     }()
 
@@ -27,6 +26,7 @@ class FeedCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .cyan
+        imageView.image = UIImage(named: "Beth")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
