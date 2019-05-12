@@ -17,13 +17,19 @@ class FeedCell: UICollectionViewCell {
 
     let nameLabel: UILabel = {
         let label = UILabel()
+
         label.numberOfLines = 2
         let attributedText = NSMutableAttributedString(string: "_Beth", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
         attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ", attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor(red: 155/255, green: 161/255, blue: 171/255, alpha: 1)]))
+
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4
+        attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
 
-        attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))   
+        let attachment = NSTextAttachment()
+        attachment.image = UIImage(named: "004-grid-world.imageset")
+        attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
+        attributedText.append(NSAttributedString(attachment: attachment))
 
         label.attributedText = attributedText
         return label
