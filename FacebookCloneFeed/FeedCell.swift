@@ -22,14 +22,26 @@ class FeedCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
+    let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .cyan
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
     private func setupViews() {
         backgroundColor = UIColor.white
         addSubview(nameLabel)
-        let horizontalConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": nameLabel])
-        let verticalConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": nameLabel])
+        addSubview(profileImageView)
+
+        let horizontalConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-8-[v1]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": profileImageView,"v1": nameLabel])
+        let verticalLabelConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": nameLabel])
+        let verticalProfileConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": profileImageView])
         addConstraints(horizontalConstraint)
-        addConstraints(verticalConstraint)
+        addConstraints(verticalLabelConstraint)
+        addConstraints(verticalProfileConstraint)
     }
 }
 
