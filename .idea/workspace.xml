@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e3e417-dcba-4e09-944d-d49c7180c192" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/001-share-option.imageset/001-share-option.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/001-share-option.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/002-comment.imageset/002-comment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/002-comment.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/003-like.imageset/003-like.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/003-like.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/004-grid-world.imageset/004-grid-world.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/004-grid-world.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/Ahmed.imageset/Ahmed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/Ahmed.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/Beth.imageset/Beth.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/Beth.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/Lang.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FacebookCloneFeed/Assets.xcassets/Lang.imageset/Lang.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FacebookCloneFeed.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FacebookCloneFeed.xcodeproj/project.xcworkspace/xcuserdata/alancasas.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed.xcodeproj/project.xcworkspace/xcuserdata/alancasas.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/FacebookCloneFeed-fmkrovbgmcvoficgkorottentkck/Build/Intermediates.noindex/" />
@@ -34,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="284">
+              <caret line="21" column="300" selection-start-line="21" selection-start-column="300" selection-end-line="21" selection-end-column="300" />
             </state>
           </provider>
         </entry>
@@ -169,12 +152,12 @@
       <option name="presentableId" value="Default" />
       <updated>1557643915867</updated>
       <workItem from="1557643920832" duration="514000" />
-      <workItem from="1557674226443" duration="4946000" />
+      <workItem from="1557674226443" duration="5393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9227000" />
+    <option name="totallyTimeSpent" value="9674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1920" height="1080" extended-state="0" />
@@ -243,8 +226,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="284">
+          <caret line="21" column="300" selection-start-line="21" selection-start-column="300" selection-end-line="21" selection-end-column="300" />
         </state>
       </provider>
     </entry>
