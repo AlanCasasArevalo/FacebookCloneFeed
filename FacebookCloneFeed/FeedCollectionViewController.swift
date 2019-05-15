@@ -14,8 +14,8 @@ class FeedCollectionViewController: UIViewController {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
-    let postMark = Post(name: "Mark Zuckerber", statusText: "Facebook inventor")
-    let postSteve = Post(name: "Steve Jobs", statusText: "iOS Inventor, apple tv, iPhone, iPad, Mac, MacBook, oiajsoaijsoiajsdoaisjasd asoijadsoij asdioja soijadsoijd asijd asijdaspoij dasija sdpoiasj aoijsd aoijd poiejdeoijemosic iojf wioejf woiej fcmoiwej foij ")
+    let postMark = Post(name: "Mark Zuckerber", statusText: "Facebook inventor",profileImageName: "Ahmed", numLikes: 486, numCommnts: 1900, postImageName: "Ahmed")
+    let postSteve = Post(name: "Steve Jobs", statusText: "iOS Inventor, apple tv, iPhone, iPad, Mac, MacBook, oiajsoaijsoiajsdoaisjasd asoijadsoij asdioja soijadsoijd asijd asijdaspoij dasija sdpoiasj aoijsd aoijd poiejdeoijemosic iojf wioejf woiej fcmoiwej foij ",profileImageName: "Beth", numLikes: 530, numCommnts: 903, postImageName: "Beth")
     
     
     

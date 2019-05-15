@@ -11,4 +11,8 @@ import Foundation
 struct Post {
     var name: String?
     var statusText: String?
+    var profileImageName: String
+    var numLikes: Int?
+    var numCommnts: Int?
+    var postImageName: String?
 }

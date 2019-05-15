@@ -24,8 +24,17 @@ class FeedCell: UICollectionViewCell {
             nameLabel.attributedText = attributedText
             
             guard let statusText = post?.statusText else { return }
-            
             statusTextView.text = statusText
+            
+            guard let profileImageName = post?.profileImageName else { return }
+            profileImageView.image = UIImage(named: profileImageName)
+        
+            guard let postImageName = post?.postImageName else { return }
+            statusImageView.image = UIImage(named: postImageName)
+
+            guard let numLikes = post?.numLikes else { return }
+            guard let numComments = post?.numCommnts else { return }
+            likesCommentsLabel.text = "\(numLikes) likes \(numComments) Comments"
             
         }
     }
