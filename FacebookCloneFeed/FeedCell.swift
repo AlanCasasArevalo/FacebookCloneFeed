@@ -20,7 +20,9 @@ class FeedCell: UICollectionViewCell {
 
         label.numberOfLines = 2
         let attributedText = NSMutableAttributedString(string: "_Beth", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
-        attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ", attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor(red: 155/255, green: 161/255, blue: 171/255, alpha: 1)]))
+        attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ", 
+                attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.rgbCustomColor(red: 155, green: 161, blue: 171)]))
+
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4
@@ -57,6 +59,13 @@ class FeedCell: UICollectionViewCell {
         return imageView
     }()
 
+    let likesCommentsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "480 likes 1.7k Comments"
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+
     private func setupViews() {
         backgroundColor = UIColor.white
 
@@ -64,12 +73,21 @@ class FeedCell: UICollectionViewCell {
         addSubview(profileImageView)
         addSubview(statusTextView)
         addSubview(statusImageView)
+        addSubview(likesCommentsLabel)
 
         addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView,  nameLabel)
         addConstraintsWithFormat(format: "H:|-4-[v0]-4-|", views: statusTextView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: statusImageView)
+        addConstraintsWithFormat(format: "H:|-12-[v0]|", views: likesCommentsLabel)
         addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
-        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]|", views: profileImageView, statusTextView, statusImageView)
+        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel)
+
+    }
+}
+
+extension UIColor {
+    static func rgbCustomColor (red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor{
+        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }
 }
 
