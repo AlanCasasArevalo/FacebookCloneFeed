@@ -9,36 +9,57 @@ class FeedCell: UICollectionViewCell {
     
     var post: Post? {
         didSet{
-            guard let name = post?.name else { return }
-            
-            let attributedText = NSMutableAttributedString(string: name, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
-            attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ",
-                                                     attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.rgbCustomColor(red: 155, green: 161, blue: 171)]))
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = 4
-            attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
-            let attachment = NSTextAttachment()
-            attachment.image = UIImage(named: "004-grid-world.imageset")
-            attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
-            attributedText.append(NSAttributedString(attachment: attachment))
-            nameLabel.attributedText = attributedText
-            
-            guard let statusText = post?.statusText else { return }
-            statusTextView.text = statusText
-            
-            guard let profileImageName = post?.profileImageName else { return }
-            profileImageView.image = UIImage(named: profileImageName)
-        
-            guard let postImageName = post?.postImageName else { return }
-            statusImageView.image = UIImage(named: postImageName)
-
-            guard let numLikes = post?.numLikes else { return }
-            guard let numComments = post?.numCommnts else { return }
-            likesCommentsLabel.text = "\(numLikes) likes \(numComments) Comments"
-            
+            setupPostCell()
         }
     }
     
+    func setupPostCell () {
+        setName()
+        setStatusText()
+        setProfileImage()
+        setPostImage()
+        setLikesAndComments()
+    }
+    
+    func setName () {
+        guard let name = post?.name else { return }
+        
+        let attributedText = NSMutableAttributedString(string: name, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
+        attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ",
+                                                 attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.rgbCustomColor(red: 155, green: 161, blue: 171)]))
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 4
+        attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
+        let attachment = NSTextAttachment()
+        attachment.image = UIImage(named: "004-grid-world.imageset")
+        attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
+        attributedText.append(NSAttributedString(attachment: attachment))
+        nameLabel.attributedText = attributedText
+    }
+
+    func setStatusText () {
+        guard let statusText = post?.statusText else { return }
+        statusTextView.text = statusText
+    }
+    
+    func setProfileImage() {
+        profileImageView.image = nil
+        guard let profileImageName = post?.profileImageName else { return }
+        profileImageView.image = UIImage(named: profileImageName)
+    }
+    
+    func setPostImage() {
+        statusImageView.image = nil
+        guard let postImageName = post?.postImageName else { return }
+        statusImageView.image = UIImage(named: postImageName)
+    }
+    
+    func setLikesAndComments() {
+        guard let numLikes = post?.numLikes else { return }
+        guard let numComments = post?.numCommnts else { return }
+        likesCommentsLabel.text = "\(numLikes) likes \(numComments) Comments"
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
