@@ -49,8 +49,8 @@ extension FeedCollectionViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCollectionCell = myCollectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! FeedCell
-        myCollectionCell.nameLabel.text = posts[indexPath.row].name ?? ""
+        let myCollectionCell = myCollectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! FeedCell        
+        myCollectionCell.post = posts[indexPath.row]
         return myCollectionCell
     }
 
