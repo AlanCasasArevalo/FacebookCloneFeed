@@ -9,7 +9,9 @@ class FeedCell: UICollectionViewCell {
     
     var post: Post? {
         didSet{
-            let attributedText = NSMutableAttributedString(string: "_Beth", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
+            guard let name = post?.name else { return }
+            
+            let attributedText = NSMutableAttributedString(string: name, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
             attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ",
                                                      attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.rgbCustomColor(red: 155, green: 161, blue: 171)]))
             let paragraphStyle = NSMutableParagraphStyle()
