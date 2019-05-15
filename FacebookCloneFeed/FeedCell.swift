@@ -69,6 +69,16 @@ class FeedCell: UICollectionViewCell {
         return view
     }()
 
+    let likeButton: UIButton = {
+        let button = UIButton(frame: CGRect())
+        button.setTitle("Like", for: .normal)
+        button.setTitleColor(UIColor.rgbCustomColor(red: 143, green: 150, blue: 263), for: .normal)
+        button.setImage(UIImage(named: "003-like.imageset"), for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+        return button
+    }()
+
     private func setupViews() {
         backgroundColor = UIColor.white
 
@@ -78,15 +88,16 @@ class FeedCell: UICollectionViewCell {
         addSubview(statusImageView)
         addSubview(likesCommentsLabel)
         addSubview(dividerLineView)
+        addSubview(likeButton)
 
         addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView,  nameLabel)
         addConstraintsWithFormat(format: "H:|-4-[v0]-4-|", views: statusTextView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: statusImageView)
         addConstraintsWithFormat(format: "H:|-12-[v0]|", views: likesCommentsLabel)
         addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: dividerLineView)
-
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: likeButton)
         addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
-        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-[v4(1)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, dividerLineView)
+        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-[v4(1)]-8-[v5(44)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, dividerLineView, likeButton)
 
     }
 }
