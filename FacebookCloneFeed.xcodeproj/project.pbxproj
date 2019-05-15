@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51B315D3228868BC000116E6 /* FeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B315D1228868BC000116E6 /* FeedCollectionViewController.swift */; };
+		51B315D4228868BC000116E6 /* FeedCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */; };
+		51E96BB2228C28D000300E1F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E96BB1228C28D000300E1F /* Post.swift */; };
 		CD7F70464338E28E3CA86DA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7F7BC9C7D3471D55DE73B5 /* LaunchScreen.storyboard */; };
 		CD7F73538C7BD818EB32DA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7F7213119A5888165D27B1 /* Assets.xcassets */; };
+		CD7F77F840A108F408A1FD39 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7FD8BABBF5344CD8D996 /* FeedCell.swift */; };
 		CD7F799F0681964D154C011B /* FacebookCloneFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7F3F8BDF7B3246878903 /* FacebookCloneFeedTests.swift */; };
 		CD7F7FC599AD17E034570F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7DA5F73F7BD0B57B83E9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51B315D1228868BC000116E6 /* FeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewController.swift; sourceTree = "<group>"; };
+		51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCollectionViewController.xib; sourceTree = "<group>"; };
+		51E96BB1228C28D000300E1F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CD7F7213119A5888165D27B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD7F7495B80059F5110000DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CD7F74B4C1F38DB09354E8E9 /* FacebookCloneFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookCloneFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +39,7 @@
 		CD7F7AB9381E4C08A197C39C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7F7DA5F73F7BD0B57B83E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7F7F3F8BDF7B3246878903 /* FacebookCloneFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCloneFeedTests.swift; sourceTree = "<group>"; };
+		CD7F7FD8BABBF5344CD8D996 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				CD7F7213119A5888165D27B1 /* Assets.xcassets */,
 				CD7F7BC9C7D3471D55DE73B5 /* LaunchScreen.storyboard */,
 				CD7F7DA5F73F7BD0B57B83E9 /* AppDelegate.swift */,
+				51B315D1228868BC000116E6 /* FeedCollectionViewController.swift */,
+				51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */,
+				CD7F7FD8BABBF5344CD8D996 /* FeedCell.swift */,
+				51E96BB1228C28D000300E1F /* Post.swift */,
 			);
 			path = FacebookCloneFeed;
 			sourceTree = "<group>";
@@ -134,14 +146,21 @@
 		CD7F79C9DF410683027AEF1B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					CD7F70ADFC6D54D0481A1DDC = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = CD7F7B0E663D5FA4AE16DF90 /* Build configuration list for PBXProject "FacebookCloneFeed" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CD7F7AE916ABA558BBBB0809;
 			productRefGroup = CD7F7F596532E9A8A95B28FF /* Products */;
@@ -160,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD7F73538C7BD818EB32DA89 /* Assets.xcassets in Resources */,
+				51B315D4228868BC000116E6 /* FeedCollectionViewController.xib in Resources */,
 				CD7F70464338E28E3CA86DA1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B315D3228868BC000116E6 /* FeedCollectionViewController.swift in Sources */,
 				CD7F7FC599AD17E034570F11 /* AppDelegate.swift in Sources */,
+				CD7F77F840A108F408A1FD39 /* FeedCell.swift in Sources */,
+				51E96BB2228C28D000300E1F /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +243,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alancasasarevalo-gmail.FacebookCloneFeed";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -233,7 +256,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alancasasarevalo-gmail.FacebookCloneFeed";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -270,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -324,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
