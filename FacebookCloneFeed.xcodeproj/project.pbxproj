@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512A1688228C898400C31809 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A1687228C898400C31809 /* FriendsTableViewController.swift */; };
+		512A168A228C8B5000C31809 /* FriendsRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A1689228C8B5000C31809 /* FriendsRequestCell.swift */; };
 		51B315D3228868BC000116E6 /* FeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B315D1228868BC000116E6 /* FeedCollectionViewController.swift */; };
 		51B315D4228868BC000116E6 /* FeedCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */; };
 		51E96BB2228C28D000300E1F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E96BB1228C28D000300E1F /* Post.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		512A1687228C898400C31809 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		512A1689228C8B5000C31809 /* FriendsRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequestCell.swift; sourceTree = "<group>"; };
 		51B315D1228868BC000116E6 /* FeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewController.swift; sourceTree = "<group>"; };
 		51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCollectionViewController.xib; sourceTree = "<group>"; };
 		51E96BB1228C28D000300E1F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				51B315D2228868BC000116E6 /* FeedCollectionViewController.xib */,
 				CD7F7FD8BABBF5344CD8D996 /* FeedCell.swift */,
 				51E96BB1228C28D000300E1F /* Post.swift */,
+				512A1687228C898400C31809 /* FriendsTableViewController.swift */,
+				512A1689228C8B5000C31809 /* FriendsRequestCell.swift */,
 			);
 			path = FacebookCloneFeed;
 			sourceTree = "<group>";
@@ -203,6 +209,8 @@
 			files = (
 				51B315D3228868BC000116E6 /* FeedCollectionViewController.swift in Sources */,
 				CD7F7FC599AD17E034570F11 /* AppDelegate.swift in Sources */,
+				512A168A228C8B5000C31809 /* FriendsRequestCell.swift in Sources */,
+				512A1688228C898400C31809 /* FriendsTableViewController.swift in Sources */,
 				51E96BE2228C7F5200300E1F /* CustomTabBarController.swift in Sources */,
 				CD7F77F840A108F408A1FD39 /* FeedCell.swift in Sources */,
 				51E96BB2228C28D000300E1F /* Post.swift in Sources */,
