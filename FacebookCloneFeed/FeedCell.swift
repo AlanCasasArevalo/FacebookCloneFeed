@@ -6,6 +6,23 @@
 import UIKit
 
 class FeedCell: UICollectionViewCell {
+    
+    var post: Post? {
+        didSet{
+            let attributedText = NSMutableAttributedString(string: "_Beth", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
+            attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ",
+                                                     attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.rgbCustomColor(red: 155, green: 161, blue: 171)]))
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+            attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
+            let attachment = NSTextAttachment()
+            attachment.image = UIImage(named: "004-grid-world.imageset")
+            attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
+            attributedText.append(NSAttributedString(attachment: attachment))
+            nameLabel.attributedText = attributedText
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -17,19 +34,8 @@ class FeedCell: UICollectionViewCell {
 
     let nameLabel: UILabel = {
         let label = UILabel()
-
         label.numberOfLines = 2
-        let attributedText = NSMutableAttributedString(string: "_Beth", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
-        attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ", 
-                attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.rgbCustomColor(red: 155, green: 161, blue: 171)]))
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 4
-        attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
-        let attachment = NSTextAttachment()
-        attachment.image = UIImage(named: "004-grid-world.imageset")
-        attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
-        attributedText.append(NSAttributedString(attachment: attachment))
-        label.attributedText = attributedText
+       
         return label
     }()
 
@@ -69,26 +75,9 @@ class FeedCell: UICollectionViewCell {
         return view
     }()
 
-    let likeButton: UIButton = {
-        let button = UIButton(frame: CGRect())
-        button.setTitle("Like", for: .normal)
-        button.setTitleColor(UIColor.rgbCustomColor(red: 143, green: 150, blue: 263), for: .normal)
-        button.setImage(UIImage(named: "003-like.imageset"), for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
-        return button
-    }()
-
-    let commentButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Comment", for: .normal)
-        button.setTitleColor(UIColor.rgbCustomColor(red: 143, green: 150, blue: 263), for: .normal)
-        button.setImage(UIImage(named: "002-comment.imageset"), for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-
-
-        return button
-    }()
+    let likeButton = buttonTitleAndImage(titleButton: "Like", imageButton: "003-like.imageset", color: UIColor.rgbCustomColor(red: 143, green: 150, blue: 263), font: UIFont.systemFont(ofSize: 14))
+    let commentButton = buttonTitleAndImage(titleButton: "Comment", imageButton: "002-comment.imageset", color: UIColor.rgbCustomColor(red: 143, green: 150, blue: 263), font: UIFont.systemFont(ofSize: 14))
+    let shareButton = buttonTitleAndImage(titleButton: "Share", imageButton: "001-share-option.imageset", color: UIColor.rgbCustomColor(red: 143, green: 150, blue: 263), font: UIFont.systemFont(ofSize: 14))
 
     private func setupViews() {
         backgroundColor = UIColor.white
@@ -101,16 +90,33 @@ class FeedCell: UICollectionViewCell {
         addSubview(dividerLineView)
         addSubview(likeButton)
         addSubview(commentButton)
+        addSubview(shareButton)
 
-        addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView,  nameLabel)
+        addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]-8-|", views: profileImageView,  nameLabel)
         addConstraintsWithFormat(format: "H:|-4-[v0]-4-|", views: statusTextView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: statusImageView)
         addConstraintsWithFormat(format: "H:|-12-[v0]|", views: likesCommentsLabel)
         addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: dividerLineView)
-        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: likeButton)
-        addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
-        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-[v4(1)]-8-[v5(44)]-8-[v6(44)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, dividerLineView, likeButton, commentButton)
 
+        //Buttons constraint
+        addConstraintsWithFormat(format: "H:|-12-[v0(v2)]-12-[v1(v2)]-8-[v2]|", views: likeButton, commentButton, shareButton)
+        addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-[v4(1)]-8-[v5(44)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, dividerLineView, likeButton)
+
+        addConstraintsWithFormat(format: "V:[v0(44)]|", views: commentButton)
+        addConstraintsWithFormat(format: "V:[v0(44)]|", views: shareButton)
+
+    }
+}
+
+extension FeedCell {
+    static func buttonTitleAndImage (titleButton: String, imageButton: String, color: UIColor, font: UIFont) -> UIButton {
+        let button = UIButton()
+        button.setTitle(titleButton, for: .normal)
+        button.setTitleColor(color, for: .normal)
+        button.setImage(UIImage(named: imageButton), for: .normal)
+        button.titleLabel?.font = font
+        return button
     }
 }
 

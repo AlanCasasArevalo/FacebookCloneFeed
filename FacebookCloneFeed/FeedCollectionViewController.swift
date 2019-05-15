@@ -14,11 +14,18 @@ class FeedCollectionViewController: UIViewController {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    let postMark = Post(name: "Mark Zuckerber")
+    let postSteve = Post(name: "Steve Jobs")
+    
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollection()
         registerCollectionViewController()
         setupUI()
+        posts.append(postMark)
+        posts.append(postSteve)
     }
 
     func registerCollectionViewController()  {
@@ -38,12 +45,18 @@ class FeedCollectionViewController: UIViewController {
 
 extension FeedCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCollectionCell = myCollectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! FeedCell
+        myCollectionCell.nameLabel.text = posts[indexPath.row].name ?? ""
         return myCollectionCell
+    }
+
+    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        myCollectionView.collectionViewLayout.invalidateLayout()
     }
 }
 
