@@ -14,8 +14,10 @@ class FeedCollectionViewController: UIViewController {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
-    let postMark = Post(name: "Mark Zuckerber")
-    let postSteve = Post(name: "Steve Jobs")
+    let postMark = Post(name: "Mark Zuckerber", statusText: "Facebook inventor")
+    let postSteve = Post(name: "Steve Jobs", statusText: "iOS Inventor, apple tv, iPhone, iPad, Mac, MacBook, oiajsoaijsoiajsdoaisjasd asoijadsoij asdioja soijadsoijd asijd asijdaspoij dasija sdpoiasj aoijsd aoijd poiejdeoijemosic iojf wioejf woiej fcmoiwej foij ")
+    
+    
     
     var posts = [Post]()
     
@@ -63,7 +65,17 @@ extension FeedCollectionViewController: UICollectionViewDelegate, UICollectionVi
 extension FeedCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 400)
+        
+
+        if let statusText = posts[indexPath.row].statusText {
+            let rect = NSString(string: statusText).boundingRect(with: CGSize(width: view.frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)], context: nil)
+
+            let knowedHeight: CGFloat = 8+44+4+4+200+8+24+8+1+8+44+8
+
+            return CGSize(width: view.frame.width, height: rect.height + knowedHeight + 24)
+        }
+        
+        return CGSize(width: view.frame.width, height: 300)
     }
     
 }

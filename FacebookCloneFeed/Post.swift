@@ -10,4 +10,5 @@ import Foundation
 
 struct Post {
     var name: String?
+    var statusText: String?
 }

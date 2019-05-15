@@ -22,6 +22,11 @@ class FeedCell: UICollectionViewCell {
             attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
             attributedText.append(NSAttributedString(attachment: attachment))
             nameLabel.attributedText = attributedText
+            
+            guard let statusText = post?.statusText else { return }
+            
+            statusTextView.text = statusText
+            
         }
     }
     
@@ -52,6 +57,7 @@ class FeedCell: UICollectionViewCell {
         let textView = UITextView()
         textView.text = "MeanWhile, beast turened to the dark side."
         textView.font = UIFont.systemFont(ofSize: 14)
+        textView.isScrollEnabled = false
         return textView
     }()
 
@@ -103,7 +109,7 @@ class FeedCell: UICollectionViewCell {
         //Buttons constraint
         addConstraintsWithFormat(format: "H:|-12-[v0(v2)]-12-[v1(v2)]-8-[v2]|", views: likeButton, commentButton, shareButton)
         addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
-        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-[v4(1)]-8-[v5(44)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, dividerLineView, likeButton)
+        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1]-4-[v2(200)]-8-[v3(24)]-8-[v4(1)]-8-[v5(44)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, dividerLineView, likeButton)
 
         addConstraintsWithFormat(format: "V:[v0(44)]|", views: commentButton)
         addConstraintsWithFormat(format: "V:[v0(44)]|", views: shareButton)
