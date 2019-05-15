@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e3e417-dcba-4e09-944d-d49c7180c192" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FacebookCloneFeed.xcodeproj/project.xcworkspace/xcuserdata/alancasas.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed.xcodeproj/project.xcworkspace/xcuserdata/alancasas.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/FacebookCloneFeed-fmkrovbgmcvoficgkorottentkck/Build/Intermediates.noindex/" />
@@ -19,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="23" column="134" selection-start-line="23" selection-start-column="134" selection-end-line="23" selection-end-column="134" />
+            <state relative-caret-position="515">
+              <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -61,6 +59,17 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Cidr.FilesView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FacebookCloneFeed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FacebookCloneFeed" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,17 +91,6 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="FacebookCloneFeed" type="1d218c8b:XcodeProjectNode" />
               <item name="Products" type="fcab9f18:XcodeViewNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Cidr.FilesView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FacebookCloneFeed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FacebookCloneFeed" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -144,23 +142,23 @@
       <workItem from="1557643920832" duration="514000" />
       <workItem from="1557674226443" duration="8614000" />
       <workItem from="1557778311268" duration="1266000" />
+      <workItem from="1557903573824" duration="680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14161000" />
+    <option name="totallyTimeSpent" value="14841000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="1280" y="23" width="1920" height="1057" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22294022" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14909478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32982087" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25560537" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25500527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39936775" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -211,8 +209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="23" column="134" selection-start-line="23" selection-start-column="134" selection-end-line="23" selection-end-column="134" />
+        <state relative-caret-position="515">
+          <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
         </state>
       </provider>
     </entry>

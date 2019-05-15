@@ -22,17 +22,13 @@ class FeedCell: UICollectionViewCell {
         let attributedText = NSMutableAttributedString(string: "_Beth", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)])
         attributedText.append(NSAttributedString(string: "\nDecember 18 • San Francisco • ", 
                 attributes:  [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.rgbCustomColor(red: 155, green: 161, blue: 171)]))
-
-
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4
         attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
-
         let attachment = NSTextAttachment()
         attachment.image = UIImage(named: "004-grid-world.imageset")
         attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
         attributedText.append(NSAttributedString(attachment: attachment))
-
         label.attributedText = attributedText
         return label
     }()
@@ -63,7 +59,14 @@ class FeedCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "480 likes 1.7k Comments"
         label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = UIColor.rgbCustomColor(red: 155, green: 161, blue: 171)
         return label
+    }()
+
+    let dividerLineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.rgbCustomColor(red: 226, green: 228, blue: 232)
+        return view
     }()
 
     private func setupViews() {
@@ -74,13 +77,16 @@ class FeedCell: UICollectionViewCell {
         addSubview(statusTextView)
         addSubview(statusImageView)
         addSubview(likesCommentsLabel)
+        addSubview(dividerLineView)
 
         addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView,  nameLabel)
         addConstraintsWithFormat(format: "H:|-4-[v0]-4-|", views: statusTextView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: statusImageView)
         addConstraintsWithFormat(format: "H:|-12-[v0]|", views: likesCommentsLabel)
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: dividerLineView)
+
         addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
-        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-[v4(1)]-8-|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, dividerLineView)
 
     }
 }
