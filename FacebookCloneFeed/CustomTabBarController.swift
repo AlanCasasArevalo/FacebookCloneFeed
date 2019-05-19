@@ -22,7 +22,8 @@ class CustomTabBarController: UITabBarController {
         let friendsNVC = UINavigationController(rootViewController: friendsController)
         friendsNVC.title = "Friend request"
         friendsNVC.tabBarItem.image = UIImage(named: "friends")
-        viewControllers = [feedNVC, friendsNVC]
+        
+        viewControllers = [friendsController, feedNVC]
     }
     
 }

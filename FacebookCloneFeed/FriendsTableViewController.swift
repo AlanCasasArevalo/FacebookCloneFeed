@@ -14,8 +14,7 @@ class FriendsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "Friends Request"
+        navigationItem.title = "Friend request"
         tableView.register(FriendsRequestCell.self, forCellReuseIdentifier: cellFriendsID)
     }
 
@@ -29,10 +28,11 @@ class FriendsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellFriendsID, for: indexPath) as! FriendsRequestCell
-
-        cell.textLabel?.text = "Test"
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellFriendsID, for: indexPath) as! FriendsRequestCell        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
