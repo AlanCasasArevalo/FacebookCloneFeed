@@ -16,9 +16,6 @@ class FeedCollectionViewController: UIViewController {
     
     let postMark = Post(name: "Mark Zuckerber", statusText: "Facebook inventor",profileImageName: "Ahmed", numLikes: 486, numCommnts: 1900, postImageName: "Ahmed")
     let postSteve = Post(name: "Steve Jobs", statusText: "iOS Inventor, apple tv, iPhone, iPad, Mac, MacBook, oiajsoaijsoiajsdoaisjasd asoijadsoij asdioja soijadsoijd asijd asijdaspoij dasija sdpoiasj aoijsd aoijd poiejdeoijemosic iojf wioejf woiej fcmoiwej foij ",profileImageName: "Beth", numLikes: 530, numCommnts: 903, postImageName: "Beth")
-    
-    
-    
     var posts = [Post]()
     
     override func viewDidLoad() {
@@ -40,7 +37,7 @@ class FeedCollectionViewController: UIViewController {
     }
 
     func setupUI(){
-        navigationItem.title = "Facebook Feed"
+        self.title = "News feed"
         myCollectionView.backgroundColor = UIColor(white: 0.95, alpha: 1)
     }
 }

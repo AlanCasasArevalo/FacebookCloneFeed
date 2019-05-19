@@ -58,6 +58,7 @@ class FriendsRequestCell: UITableViewCell {
         button.setTitleColor(UIColor(white: 0.3, alpha: 1), for: .normal)
         button.layer.cornerRadius = 2
         button.layer.borderColor = UIColor(white: 0.7, alpha: 1).cgColor
+        button.layer.borderWidth = 1
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 10)
         return button
     }()

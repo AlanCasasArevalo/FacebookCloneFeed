@@ -15,6 +15,7 @@
 		51E96BE2228C7F5200300E1F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E96BE1228C7F5200300E1F /* CustomTabBarController.swift */; };
 		CD7F70464338E28E3CA86DA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7F7BC9C7D3471D55DE73B5 /* LaunchScreen.storyboard */; };
 		CD7F73538C7BD818EB32DA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7F7213119A5888165D27B1 /* Assets.xcassets */; };
+		CD7F76F24631E6F790BDE44D /* RequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F775D7342AB4B90F2B1C2 /* RequestHeader.swift */; };
 		CD7F77F840A108F408A1FD39 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7FD8BABBF5344CD8D996 /* FeedCell.swift */; };
 		CD7F799F0681964D154C011B /* FacebookCloneFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7F3F8BDF7B3246878903 /* FacebookCloneFeedTests.swift */; };
 		CD7F7FC599AD17E034570F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7DA5F73F7BD0B57B83E9 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 		CD7F74B4C1F38DB09354E8E9 /* FacebookCloneFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookCloneFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7F74C5798341EFE189E45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CD7F762E2F9B1F505E5753B6 /* FacebookCloneFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookCloneFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7F775D7342AB4B90F2B1C2 /* RequestHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHeader.swift; sourceTree = "<group>"; };
 		CD7F7AB9381E4C08A197C39C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7F7DA5F73F7BD0B57B83E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7F7F3F8BDF7B3246878903 /* FacebookCloneFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCloneFeedTests.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				51E96BB1228C28D000300E1F /* Post.swift */,
 				512A1687228C898400C31809 /* FriendsTableViewController.swift */,
 				512A1689228C8B5000C31809 /* FriendsRequestCell.swift */,
+				CD7F775D7342AB4B90F2B1C2 /* RequestHeader.swift */,
 			);
 			path = FacebookCloneFeed;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				51E96BE2228C7F5200300E1F /* CustomTabBarController.swift in Sources */,
 				CD7F77F840A108F408A1FD39 /* FeedCell.swift in Sources */,
 				51E96BB2228C28D000300E1F /* Post.swift in Sources */,
+				CD7F76F24631E6F790BDE44D /* RequestHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
