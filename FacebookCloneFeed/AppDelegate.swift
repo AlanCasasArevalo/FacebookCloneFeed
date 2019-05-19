@@ -21,11 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupUI()
 
         application.statusBarStyle = .lightContent
-
-        let feedController = FeedCollectionViewController()
-        let navigationVC = UINavigationController(rootViewController: feedController)
-        window?.rootViewController = navigationVC
-        
+        window?.rootViewController = CustomTabBarController()        
         return true
     }
 
