@@ -8,24 +8,55 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController {
+class CustomTabBarController: UITabBarController, UITabBarControllerDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.delegate = self
         
         let feedController = FeedCollectionViewController()
         let feedNVC = UINavigationController(rootViewController: feedController)
-        //UIApplicationShortcutIcon.IconType.love
-        feedNVC.title = "News feed"
+        //Navigation title
+        feedController.title = "News feed"
         feedNVC.tabBarItem.image = UIImage(named: "feed")
-        
+        feedNVC.tabBarItem.selectedImage = UIImage(named: "feed")
+
         let friendsController = FriendsTableViewController()
         let friendsNVC = UINavigationController(rootViewController: friendsController)
-        friendsNVC.title = "Friend request"
+        friendsController.title = "Friends Request"
         friendsNVC.tabBarItem.image = UIImage(named: "friends")
-        
-        viewControllers = [friendsController, feedNVC]
+
+        let messengerController =  UIViewController()
+        let messengerNVC = UINavigationController(rootViewController: messengerController)
+        messengerController.title = "Messenger"
+        messengerNVC.tabBarItem.image = UIImage(named: "feed")
+
+        let notificationsController =  UIViewController()
+        let notificationsNVC = UINavigationController(rootViewController: notificationsController)
+        notificationsController.title = "Notifications"
+        notificationsNVC.tabBarItem.image = UIImage(named: "feed")
+
+        let moreController =  UIViewController()
+        let moreNVC = UINavigationController(rootViewController: moreController)
+        moreController.title = "More"
+        moreNVC.tabBarItem.image = UIImage(named: "feed")
+
+        let tabBarList = [feedNVC, friendsNVC, messengerNVC, notificationsNVC, moreNVC]
+        viewControllers = tabBarList
+
+        // to do opaque
+        tabBar.isTranslucent = false
+
+        let topBorder = CALayer()
+
+        topBorder.frame = CGRect(x: 0, y: 0, width: 1000, height: 0.5)
+        topBorder.backgroundColor = UIColor.rgbCustomColor(red: 229, green: 231, blue: 235).cgColor
+
+        tabBar.layer.addSublayer(topBorder)
+        tabBar.clipsToBounds = true
+
     }
-    
+
 }
 
 

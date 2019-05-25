@@ -10,7 +10,7 @@ import UIKit
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupUI () {
         UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 90/255, blue: 149/255, alpha: 1)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UITabBar.appearance().tintColor = UIColor.rgbCustomColor(red: 70, green: 146, blue: 250)
     }
 }
 
