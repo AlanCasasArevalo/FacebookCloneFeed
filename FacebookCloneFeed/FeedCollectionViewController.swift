@@ -16,6 +16,11 @@ class FeedCollectionViewController: UIViewController {
     
     let postMark = Post(name: "Mark Zuckerber", statusText: "Facebook inventor",profileImageName: "Ahmed", numLikes: 486, numCommnts: 1900, postImageName: "Ahmed")
     let postSteve = Post(name: "Steve Jobs", statusText: "iOS Inventor, apple tv, iPhone, iPad, Mac, MacBook, oiajsoaijsoiajsdoaisjasd asoijadsoij asdioja soijadsoijd asijd asijdaspoij dasija sdpoiasj aoijsd aoijd poiejdeoijemosic iojf wioejf woiej fcmoiwej foij ",profileImageName: "Beth", numLikes: 530, numCommnts: 903, postImageName: "Beth")
+    let postMusk = Post(name: "Mark Zuckerber", statusText: "Facebook inventor",profileImageName: "Ahmed", numLikes: 486, numCommnts: 1900, postImageName: "Ahmed")
+    let postGhandi = Post(name: "Steve Jobs", statusText: "iOS Inventor, apple tv, iPhone, iPad, Mac, MacBook, oiajsoaijsoiajsdoaisjasd asoijadsoij asdioja soijadsoijd asijd asijdaspoij dasija sdpoiasj aoijsd aoijd poiejdeoijemosic iojf wioejf woiej fcmoiwej foij ",profileImageName: "Beth", numLikes: 530, numCommnts: 903, postImageName: "Beth")
+    let postLilan = Post(name: "Mark Zuckerber", statusText: "Facebook inventor",profileImageName: "Ahmed", numLikes: 486, numCommnts: 1900, postImageName: "Ahmed")
+    let postNoel = Post(name: "Steve Jobs", statusText: "iOS Inventor, apple tv, iPhone, iPad, Mac, MacBook, oiajsoaijsoiajsdoaisjasd asoijadsoij asdioja soijadsoijd asijd asijdaspoij dasija sdpoiasj aoijsd aoijd poiejdeoijemosic iojf wioejf woiej fcmoiwej foij ",profileImageName: "Beth", numLikes: 530, numCommnts: 903, postImageName: "Beth")
+    let postBono = Post(name: "Mark Zuckerber", statusText: "Facebook inventor",profileImageName: "Ahmed", numLikes: 486, numCommnts: 1900, postImageName: "Ahmed")
     var posts = [Post]()
     
     override func viewDidLoad() {
@@ -25,6 +30,12 @@ class FeedCollectionViewController: UIViewController {
         setupUI()
         posts.append(postMark)
         posts.append(postSteve)
+        posts.append(postMusk)
+        posts.append(postGhandi)
+        posts.append(postLilan)
+        posts.append(postNoel)
+        posts.append(postBono)
+
     }
 
     func registerCollectionViewController()  {
