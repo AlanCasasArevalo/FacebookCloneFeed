@@ -72,7 +72,6 @@ class FeedCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-       
         return label
     }()
 
@@ -94,6 +93,7 @@ class FeedCell: UICollectionViewCell {
     let statusImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.isUserInteractionEnabled = true
         imageView.layer.masksToBounds = true
         imageView.image = UIImage(named: "Lang")
         return imageView
@@ -117,9 +117,17 @@ class FeedCell: UICollectionViewCell {
     let commentButton = buttonTitleAndImage(titleButton: "Comment", imageButton: "002-comment.imageset", color: UIColor.rgbCustomColor(red: 143, green: 150, blue: 263), font: UIFont.systemFont(ofSize: 14))
     let shareButton = buttonTitleAndImage(titleButton: "Share", imageButton: "001-share-option.imageset", color: UIColor.rgbCustomColor(red: 143, green: 150, blue: 263), font: UIFont.systemFont(ofSize: 14))
 
+    @objc func animateView () {
+        let view = UIView()
+        view.backgroundColor = UIColor.red
+        view.frame = statusImageView.frame
+        addSubview(view)
+    }
+
     private func setupViews() {
         backgroundColor = UIColor.white
 
+        statusImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(animateView)))
         addSubview(nameLabel)
         addSubview(profileImageView)
         addSubview(statusTextView)

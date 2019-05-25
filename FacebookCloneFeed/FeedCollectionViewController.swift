@@ -51,6 +51,14 @@ class FeedCollectionViewController: UIViewController {
         self.title = "News feed"
         myCollectionView.backgroundColor = UIColor(white: 0.95, alpha: 1)
     }
+
+    func animateImageView (statusImageView : UIImageView) {
+        let view = UIView()
+        view.backgroundColor = UIColor.black
+        view.frame = statusImageView.frame
+        view.addSubview(view)
+    }
+
 }
 
 extension FeedCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {

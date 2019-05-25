@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e3e417-dcba-4e09-944d-d49c7180c192" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/FacebookCloneFeed.xcodeproj/project.xcworkspace/xcuserdata/alancasas.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed.xcodeproj/project.xcworkspace/xcuserdata/alancasas.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/FacebookCloneFeed-fmkrovbgmcvoficgkorottentkck/Build/Intermediates.noindex/" />
@@ -26,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FriendsTableViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
+            <state relative-caret-position="1081">
               <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
@@ -35,8 +37,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            <state relative-caret-position="424">
+              <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -65,21 +76,21 @@
       <list>
         <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedController.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedViewController.swift" />
-        <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/RequestHeader.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/CustomTabBarController.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/AppDelegate.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/FriendsRequestCell.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/FriendsTableViewController.swift" />
+        <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift" />
         <option value="$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1291" />
-    <option name="y" value="37" />
+    <option name="x" value="1280" />
+    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="996" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -208,12 +219,12 @@
       <workItem from="1557933507867" duration="197000" />
       <workItem from="1557986154425" duration="15000" />
       <workItem from="1558245908956" duration="7485000" />
-      <workItem from="1558766984625" duration="1554000" />
+      <workItem from="1558766984625" duration="3562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28349000" />
+    <option name="totallyTimeSpent" value="30357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1920" height="1057" extended-state="6" />
@@ -225,7 +236,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32982087" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25500527" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25500527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39936775" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -283,13 +294,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedViewController.swift" />
-    <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/RequestHeader.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -318,17 +322,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCell.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FriendsTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
+        <state relative-caret-position="1081">
           <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FacebookCloneFeed/FeedCollectionViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        <state relative-caret-position="424">
+          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
         </state>
       </provider>
     </entry>
