@@ -36,20 +36,33 @@ class FriendsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellFriendsID, for: indexPath) as! FriendsRequestCell        
+
+        if indexPath.row % 3 == 0 {
+            cell.nameLabel.text = "Beth"
+            cell.profileImageView.image = UIImage(named: "Beth")
+        } else if indexPath.row % 3 == 1 {
+            cell.nameLabel.text = "Lang"
+            cell.profileImageView.image = UIImage(named: "Lang")
+        } else {
+            cell.nameLabel.text = "Ahmed"
+            cell.profileImageView.image = UIImage(named: "Ahmed")
+        }
+
+        cell.imageView?.backgroundColor = UIColor.black
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return UITableView.automaticDimension
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

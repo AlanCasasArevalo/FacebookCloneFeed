@@ -100,14 +100,11 @@ class FriendsRequestCell: UITableViewCell {
 
         addConstraintsWithFormat(format: "H:|-16-[v0(52)]-8-[v1]|", views: profileImageView, nameLabel)
 
-        addConstraintsWithFormat(format: "V:|-4-[v0]-4-|", views: profileImageView)
+        addConstraintsWithFormat(format: "V:|-4-[v0(52)]-4-|", views: profileImageView)
         addConstraintsWithFormat(format: "V:|-8-[v0]-8-[v1(24)]-8-|", views: nameLabel, confirmButton)
 
-        addConstraintsWithFormat(format: "H:|-76-[v0(80)]-8-[v1(80)]|", views: confirmButton, deleteButton)
+        addConstraintsWithFormat(format: "H:|-76-[v0(80)]-8-[v1(80)]-76-|", views: confirmButton, deleteButton)
         addConstraintsWithFormat(format: "V:[v0(24)]-8-|", views: deleteButton)
-
-
-
     }
 
 }
